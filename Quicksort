@@ -1,0 +1,29 @@
+__________________________________________________________________________
+              
+                          Quicksort                               
+_________________________________________________________________________
+
+def quick_sort(sequence):
+    length = len(sequence)
+    if length <= 1:
+        return sequence
+    else:
+        pivot = sequence.pop()
+
+    items_greater = []
+    items_lower = []
+
+    for item in sequence:
+        if item > pivot:
+            items_greater.append(item)
+        else:
+            items_lower.append(item)
+
+    return quick_sort(items_lower) + [pivot] + quick_sort(items_greater)
+    
+__________________________________________________________________________
+
+- Worst time complexity of O(n2), because the last number pop()'ed from the 
+list could be the first or the last element in the end sorted list.
+- Time complexity could be improved to O(nLogn)for the worst case by 
+picking the median of the list.
