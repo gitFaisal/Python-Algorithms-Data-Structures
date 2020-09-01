@@ -1,4 +1,4 @@
-__________________________________________________________________________
+_________________________________________________________________________
               
                           Quicksort                               
 _________________________________________________________________________
@@ -21,9 +21,9 @@ def quick_sort(sequence):
 
     return quick_sort(items_lower) + [pivot] + quick_sort(items_greater)
     
-__________________________________________________________________________
+_________________________________________________________________________
 
-- Worst time complexity of O(n2), because the last number pop()'ed from the 
-list could be the first or the last element in the end sorted list.
+- Worst time complexity of O(n2), because the last number pop()'ed from 
+the list could be the first or the last element in the end sorted list.
 - Time complexity could be improved to O(nLogn)for the worst case by 
 picking the median of the list.
